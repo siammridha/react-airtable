@@ -1,0 +1,35 @@
+.container {
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header {
+    grid-row: 1;
+    width: 100%;
+    height: 5rem;
+    background-color: rgb(163, 163, 163);
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: left;
+    align-content: flex-end;
+}
+
+.create_table_button {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.tab {
+    background-color: rgb(255, 255, 255);
+    width: max-content;
+    height: max-content;
+    text-align: center;
+    padding: 0.4rem;
+    border: none;
+    border-radius: .2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}

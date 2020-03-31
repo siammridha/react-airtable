@@ -1,0 +1,20 @@
+.cell {
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+    font-size: .8rem;
+    font-weight: 400;
+    border: 0.01rem solid rgb(160, 160, 160);
+    background-color: rgb(255, 255, 255);
+    border-top: none;
+    border-left: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.cell:first-child {
+    width: 5rem;
+    font-weight: 500;
+    min-width: max-content;
+}

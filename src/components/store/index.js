@@ -7,11 +7,18 @@ export default createStore(reducer, {
         name: 'Table 1',
         id: 'sdfsdfdsfdsfdsfsd',
         columns: [{
+            column_id: 'sfdfasfdsafsadfsa',
+            name: 'email',
+            type: 'varchar',
+            length: 100,
+            not_null: true,
+            default_value: '',
+            width: '10rem',
+        }, {
             column_id: 'asdsfsdafsdafsaf',
             name: 'first_name',
             type: 'varchar',
-            type_length: 50,
-            key: '',
+            length: 50,
             not_null: true,
             default_value: '',
             width: '10rem',
@@ -20,41 +27,32 @@ export default createStore(reducer, {
             column_id: 'sadfasfdsafdsaf',
             name: 'last_namesadfsadfsasadfsaf saf sdfasdf',
             type: 'varchar',
-            type_length: 50,
-            key: '',
+            length: 50,
             not_null: true,
             default_value: '',
             width: '10rem',
 
         },
         {
-            column_id: 'sfdfasfdsafsadfsa',
-            name: 'email',
-            type: 'varchar',
-            type_length: 100,
-            key: '',
-            not_null: true,
-            default_value: '',
-            width: '10rem',
-        }, {
             column_id: 'fsadfsafs',
-            name: 'addres',
+            name: 'address',
             type: 'varchar',
-            type_length: 50,
-            key: '',
+            length: 50,
             not_null: true,
             default_value: '',
             width: '10rem',
         }],
         rows: [
-            ['Mridha', 'Siam', 'siam@sharedstudios.com'],
-            ['Alam', 'Masud', 'masudalam@sharedstudios.com']
-        ]
+            ['siam@sharedstudios.com', 'Siam', 'Mridha', 'dadsffsadfasfasdf'],
+            ['masudalam@sharedstudios.com', 'Masud', 'Alam', 'dfasfsafsafsaf']
+        ],
+        new_updates: {}
     }, {
         name: 'Table 2',
         id: 'hgkkgjkjjkjhgjgkj',
         columns: [],
-        rows: []
+        rows: [],
+        new_updates: {}
     }]
 })
 

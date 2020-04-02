@@ -1,0 +1,17 @@
+.row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+}
+
+.first_cell {
+    width: 5rem;
+    height: 2rem;
+    font-size: .8rem;
+    font-weight: 400;
+    padding: 0.5rem;
+    min-width: max-content;
+    border: 0.01rem solid rgb(160, 160, 160);
+    background-color: rgb(255, 255, 255);
+    border-top: none;
+}

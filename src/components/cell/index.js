@@ -1,31 +1,37 @@
 import React, { useState } from 'react'
-import { useSelector, useDispatch } from "react-redux"
+import { useDispatch } from 'react-redux'
 import styles from './styles.module.css'
 
-const Cell = ({ metadata }) => {
-    const { table_index, row_index, column_index, table, row, column } = metadata
-    const cell = useSelector(state => state.tables[table_index]['rows'][row_index][column_index])
+const Cell = ({ row, name, width, id, table_index }) => {
+    const [cell, updateCell] = useState(row)
     const [active, setActive] = useState(false)
     const dispatch = useDispatch()
 
     const onChange = (e) => {
         const value = e.target.value
-        dispatch({ type: "UPDATE-CELL", payload: { table_index, column_index, row_index, value } })
+        if (row !== value) {
+            dispatch({ type: 'ADD-TO-NEW-UPDATE', payload: { table_index, id, name, value } })
+        } else {
+            dispatch({ type: 'DELETE-FROM-NEW-UPDATE', payload: { table_index, id, name } })
+        }
+        updateCell(e.target.value)
     }
+
     return (
         <React.Fragment>
             {active ?
                 <input
                     className={styles.cell}
-                    style={{ width: column.width }}
+                    style={{ width }}
                     value={cell}
+                    name={name}
                     autoFocus={true}
                     onBlur={() => setActive(false)}
                     onChange={onChange}
                 /> :
                 <div
                     className={styles.cell}
-                    style={{ width: column.width }}
+                    style={{ width }}
                     onDoubleClick={() => setActive(true)}
                 >{cell}</div>
             }

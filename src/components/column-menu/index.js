@@ -74,7 +74,7 @@ const ColumnMenu = ({ metadata, closeMenu }) => {
             </div> :
                 <div>
                     <div>Length:
-                <input type='number' name='type_length' value={column.type_length} onChange={onChange} />
+                <input type='number' name='length' value={column.length} onChange={onChange} />
                     </div>
 
                     <div>Nullable:

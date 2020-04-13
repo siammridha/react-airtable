@@ -57,3 +57,19 @@ export default createStore(reducer, {
 })
 
 
+// {
+//     arrayBaseColumnType: 0,
+//     isAutoIncrement: false,
+//     isCaseSensitive: true,
+//     isCurrency: false,
+//     isSigned: false,
+//     label: 'description',
+//     name: 'description',
+//     nullable: 0,
+//     precision: 225,
+//     scale: 0,
+//     schemaName: '',
+//     tableName: 'apps',
+//     type: 12,
+//     typeName: 'varchar'
+// }
